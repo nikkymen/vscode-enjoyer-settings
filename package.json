@@ -1,0 +1,206 @@
+{
+  "name": "enjoyer-settings",
+  "publisher": "nikkymen",
+  "displayName": "Enjoyer Settings",
+  "description": "Best settings for VS Code. Specially for C++/CMake/Python developers",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nikkymen/vscode-enjoyer-settings"
+  },
+  "version": "0.0.2",
+  "engines": {
+    "vscode": "^1.101.0"
+  },
+  "categories": [
+    "Themes",
+    "Keymaps"
+  ],
+  "preview": true,
+  "icon": "images/logo.png",
+  "extensionDependencies": [
+    "akamud.vscode-theme-onelight",
+    "nikkymen.vscode-customizer"
+  ],
+  "contributes": {
+    "configurationDefaults": {
+    "workbench.colorTheme": "Atom One Light",
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#404142",
+        "activityBar.foreground": "#F1FDFF",
+        "titleBar.activeBackground": "#404142",
+        "titleBar.activeForeground": "#F1FDFF",
+        "titleBar.inactiveBackground": "#404142",
+        "titleBar.inactiveForeground": "#F1FDFF",
+        "titleBar.border": "#404142",
+        "statusBar.background": "#404142",
+        "statusBar.foreground": "#F1FDFF",
+        "statusBar.border": "#404142",
+        "statusBarItem.remoteBackground": "#404142",
+        "statusBarItem.remoteForeground": "#F1FDFF",
+        "statusBarItem.hoverBackground": "default"
+    },
+    "telemetry.telemetryLevel": "off",
+    "telemetry.feedback.enabled": false,
+    "extensions.ignoreRecommendations": true,
+    "window.restoreWindows": "none",
+    "terminal.integrated.mouseWheelZoom": true,
+    "editor.mouseWheelZoom": true,
+    "cmake.allowCommentsInPresetsFile": true,
+      "git.ignoreLimitWarning": true,
+      "editor.codeLens": false,
+      "editor.inlineSuggest.enabled": false,
+      "editor.inlayHints.enabled": "offUnlessPressed",
+      "editor.renderWhitespace": "trailing",
+      "editor.gotoLocation.multipleDefinitions": "goto",
+      "editor.gotoLocation.multipleTypeDefinitions": "goto",
+      "files.trimTrailingWhitespace": true,
+      "files.associations": {
+        "*.json": "jsonc"
+      },
+      "clangd.CodeLens.Enabled": true,
+      "clangd.arguments": [
+        "-log=error",
+        "-pretty",
+        "--query-driver=/usr/bin/g++",
+        "--clang-tidy=1",
+        "--background-index=1",
+        "--background-index-priority=normal",
+        "--all-scopes-completion=1",
+        "--completion-parse=auto",
+        "--completion-style=detailed",
+        "--debug-origin=0",
+        "--fallback-style=LLVM",
+        "--function-arg-placeholders=1",
+        "--header-insertion=never",
+        "--header-insertion-decorators=1",
+        "--import-insertions=0",
+        "--include-ineligible-results=0",
+        "--limit-references=1000",
+        "--limit-results=100",
+        "--ranking-model=decision_forest",
+        "--rename-file-limit=50",
+        "--malloc-trim=1",
+        "--parse-forwarding-functions=0",
+        "--pch-storage=memory",
+        "--use-dirty-headers=0"
+      ],
+      "colorIdentifiersMode.tokenKinds": [
+        "variable",
+        "parameter"
+      ],
+      "errorLens.codeLensEnabled": true,
+      "gitlens.showWelcomeOnInstall": false,
+      "gitlens.showWhatsNewAfterUpgrades": false,
+      "gitlens.currentLine.enabled": false,
+      "vscode_customizer.editor_context_selectors": [
+        "Peek",
+        "^Switch",
+        "^Go to",
+        "Find All Implementations",
+        "Show Call Hierarchy",
+        "Show Type Hierarchy",
+        "Refactor...",
+        "Source Action...",
+        "Commit Changes",
+        "Cut",
+        "Paste",
+        "Copy As",
+        "Bookmarks",
+        "Spelling",
+        "Format Document With...",
+        "Command Palette...",
+        "Show AST"
+      ]
+    },
+    "keybindings": [
+      {
+        "key": "alt+left",
+        "command": "-workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+      },
+      {
+        "key": "alt+left",
+        "command": "workbench.action.navigateBack",
+        "when": "canNavigateBack"
+      },
+      {
+        "key": "ctrl+alt+-",
+        "command": "-workbench.action.navigateBack",
+        "when": "canNavigateBack"
+      },
+      {
+        "key": "alt+right",
+        "command": "-workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+      },
+      {
+        "key": "alt+right",
+        "command": "-quickInput.acceptInBackground",
+        "when": "cursorAtEndOfQuickInputBox && inQuickInput && quickInputType == 'quickPick' || inQuickInput && !inputFocus && quickInputType == 'quickPick'"
+      },
+      {
+        "key": "alt+right",
+        "command": "workbench.action.navigateForward",
+        "when": "canNavigateForward"
+      },
+      {
+        "key": "ctrl+shift+-",
+        "command": "-workbench.action.navigateForward",
+        "when": "canNavigateForward"
+      },
+      {
+        "key": "ctrl+i",
+        "command": "editor.action.formatSelection",
+        "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "ctrl+k ctrl+f",
+        "command": "-editor.action.formatSelection",
+        "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "shift+enter",
+        "command": "-python.execSelectionInTerminal",
+        "when": "editorTextFocus && !findInputFocussed && !isCompositeNotebook && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+      },
+      {
+        "key": "shift+enter",
+        "command": "-python.execInREPL",
+        "when": "config.python.REPL.sendToNativeREPL && editorTextFocus && !isCompositeNotebook && !jupyter.ownsSelection && !notebookEditorFocused && editorLangId == 'python'"
+      },
+      {
+        "key": "ctrl+enter",
+        "command": "-github.copilot.generate",
+        "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused"
+      },
+      {
+        "key": "alt+o",
+        "command": "-C_Cpp.SwitchHeaderSource",
+        "when": "editorTextFocus && editorLangId =~ /^(c|(cuda-)?cpp)$/ && !(config.C_Cpp.intelliSenseEngine =~ /^[dD]isabled$/)"
+      },
+      {
+        "key": "f4",
+        "command": "cmantic.switchHeaderSourceInWorkspace"
+      },
+      {
+        "key": "alt+escape",
+        "command": "workbench.action.closePanel",
+        "when": "editorFocus"
+      },
+      {
+        "key": "ctrl+k",
+        "command": "workbench.action.quickOpen"
+      },
+      {
+        "key": "ctrl+b",
+        "command": "cmake.build",
+        "when": "cmake:enableFullFeatureSet && !cmake:hideBuildCommand"
+      },
+      {
+        "key": "f7",
+        "command": "-cmake.build",
+        "when": "cmake:enableFullFeatureSet && !cmake:hideBuildCommand"
+      }
+    ]
+  }
+}
