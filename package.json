@@ -32,9 +32,12 @@
         "titleBar.inactiveBackground": "#404142",
         "titleBar.inactiveForeground": "#F1FDFF",
         "titleBar.border": "#404142",
+        "statusBar.noFolderBackground": "#404142",
         "statusBar.background": "#404142",
         "statusBar.foreground": "#F1FDFF",
+        "statusBar.noFolderForeground": "#F1FDFF",
         "statusBar.border": "#404142",
+        "statusBar.noFolderBorder": "#404142",
         "statusBarItem.remoteBackground": "#404142",
         "statusBarItem.remoteForeground": "#F1FDFF",
         "statusBarItem.hoverBackground": "default"
