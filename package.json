@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/nikkymen/vscode-enjoyer-settings"
   },
-  "version": "0.0.2",
+  "version": "0.0.5",
   "engines": {
     "vscode": "^1.101.0"
   },
@@ -23,8 +23,8 @@
   ],
   "contributes": {
     "configurationDefaults": {
-    "workbench.colorTheme": "Atom One Light",
-    "workbench.colorCustomizations": {
+      "workbench.colorTheme": "Atom One Light",
+      "workbench.colorCustomizations": {
         "activityBar.background": "#404142",
         "activityBar.foreground": "#F1FDFF",
         "titleBar.activeBackground": "#404142",
@@ -41,14 +41,16 @@
         "statusBarItem.remoteBackground": "#404142",
         "statusBarItem.remoteForeground": "#F1FDFF",
         "statusBarItem.hoverBackground": "default"
-    },
-    "telemetry.telemetryLevel": "off",
-    "telemetry.feedback.enabled": false,
-    "extensions.ignoreRecommendations": true,
-    "window.restoreWindows": "none",
-    "terminal.integrated.mouseWheelZoom": true,
-    "editor.mouseWheelZoom": true,
-    "cmake.allowCommentsInPresetsFile": true,
+      },
+      "telemetry.telemetryLevel": "off",
+      "telemetry.feedback.enabled": false,
+      "extensions.ignoreRecommendations": true,
+      "window.restoreWindows": "none",
+      "terminal.integrated.mouseWheelZoom": true,
+      "editor.mouseWheelZoom": true,
+      "cmake.allowCommentsInPresetsFile": true,
+      "cmake.configureOnOpen": false,
+		  "cmake.configureOnEdit": false,
       "git.ignoreLimitWarning": true,
       "editor.codeLens": false,
       "editor.inlineSuggest.enabled": false,
@@ -193,16 +195,6 @@
       {
         "key": "ctrl+k",
         "command": "workbench.action.quickOpen"
-      },
-      {
-        "key": "ctrl+b",
-        "command": "cmake.build",
-        "when": "cmake:enableFullFeatureSet && !cmake:hideBuildCommand"
-      },
-      {
-        "key": "f7",
-        "command": "-cmake.build",
-        "when": "cmake:enableFullFeatureSet && !cmake:hideBuildCommand"
       }
     ]
   }
