@@ -7,28 +7,20 @@
     "type": "git",
     "url": "https://github.com/nikkymen/vscode-enjoyer-settings"
   },
-  "version": "0.0.5",
+  "version": "0.0.6",
   "engines": {
     "vscode": "^1.101.0"
   },
   "categories": [
-    "Themes",
+    "Other",
     "Keymaps"
   ],
   "preview": true,
   "icon": "images/logo.png",
   "extensionDependencies": [
-    "akamud.vscode-theme-onelight",
     "nikkymen.vscode-customizer"
   ],
   "contributes": {
-    "themes": [
-      {
-        "label": "Enjoyer Light",
-        "uiTheme": "vs",
-        "path": "./themes/EnjoyerLight.json"
-      }
-    ],
     "configurationDefaults": {
       "telemetry.feedback.enabled": false,
       "extensions.ignoreRecommendations": true,
@@ -45,6 +37,7 @@
       "editor.gotoLocation.multipleDefinitions": "goto",
       "editor.gotoLocation.multipleTypeDefinitions": "goto",
       "files.trimTrailingWhitespace": true,
+      "workbench.tree.indent": 18,
       "files.associations": {
         "*.json": "jsonc"
       },
@@ -74,10 +67,6 @@
         "--parse-forwarding-functions=0",
         "--pch-storage=memory",
         "--use-dirty-headers=0"
-      ],
-      "colorIdentifiersMode.tokenKinds": [
-        "variable",
-        "parameter"
       ],
       "errorLens.codeLensEnabled": true,
       "gitlens.showWelcomeOnInstall": false,
