@@ -36,6 +36,7 @@
       "editor.renderWhitespace": "trailing",
       "editor.gotoLocation.multipleDefinitions": "goto",
       "editor.gotoLocation.multipleTypeDefinitions": "goto",
+      "editor.autoIndentOnPaste": true,
       "files.trimTrailingWhitespace": true,
       "workbench.tree.indent": 18,
       "files.associations": {
